@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.scoreboard {
+   
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1 {
+    font-size: 5em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 0; /* Espaçamento interno para cima e para baixo */
+    margin-top: 20px;
+    text-align: center; /* Centralizar o texto horizontalmente */
+    border-bottom: 2px solid #ccc;
+}
+h2{
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.team {
+    margin: 0 20px; /* Espaçamento entre as equipes */
+    text-align: center;
+}
+
+.emblem-large {
+    width: 350px;
+    height: 350px;
+}
+
+.penalty-marking {
+    margin-top: 20px;
+}
+
+.penalty-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #ccc;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.penalty-circle.green {
+    background-color: green;
+}
+
+.penalty-circle.red {
+    background-color: red;
+}

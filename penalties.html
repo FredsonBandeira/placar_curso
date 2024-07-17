@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcação de Grandes Penalidades</title>
+    <link rel="stylesheet" href="penalties.css">
+</head>
+<body style="background-image: url('pav.jpg')">
+    <div class="scoreboard">
+    <h1>Grandes Penalidades</h1>
+    <div class="team-container">
+        <div class="team">
+            <img src="" alt="Emblema Equipe A" class="emblem-large" id="penaltiesTeamAEmblem">
+            <h2 id="penaltiesTeamAName">Equipe A</h2>
+            <div class="penalty-marking">
+                <!-- Cinco círculos para marcação de grandes penalidades da Equipe A -->
+                <div class="penalty-circle" data-team="A" data-index="1"></div>
+                <div class="penalty-circle" data-team="A" data-index="2"></div>
+                <div class="penalty-circle" data-team="A" data-index="3"></div>
+                <div class="penalty-circle" data-team="A" data-index="4"></div>
+                <div class="penalty-circle" data-team="A" data-index="5"></div>
+                <!-- Etc. -->
+            </div>
+        </div>
+        <div class="team">
+            <img src="" alt="Emblema Equipe B" class="emblem-large" id="penaltiesTeamBEmblem">
+            <h2 id="penaltiesTeamBName">Equipe B</h2>
+            <div class="penalty-marking">
+                <!-- Cinco círculos para marcação de grandes penalidades da Equipe B -->
+                <div class="penalty-circle" data-team="B" data-index="1"></div>
+                <div class="penalty-circle" data-team="B" data-index="2"></div>
+                <div class="penalty-circle" data-team="B" data-index="3"></div>
+                <div class="penalty-circle" data-team="B" data-index="4"></div>
+                <div class="penalty-circle" data-team="B" data-index="5"></div>
+                <!-- Etc. -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="penalties.js"></script>
+<script>
+    // Extrair parâmetros da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const teamAName = urlParams.get("teamA");
+    const teamBName = urlParams.get("teamB");
+
+    // Atualizar elementos com as informações das equipes
+    document.getElementById("penaltiesTeamAName").textContent = teamAName;
+    document.getElementById("penaltiesTeamBName").textContent = teamBName;
+</script>
+</body>
+</html>
