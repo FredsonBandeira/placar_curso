@@ -96,12 +96,14 @@ function startTimeout() {
                 timeoutTime -= 1000; // Subtrai 1 segundo a cada iteração
                 updateTimeoutDisplay();
             }
+            updateGameTimerInTimeout(); // Atualiza o tempo do jogo enquanto o tempo morto está em andamento
         }, 1000);
         timeoutIsRunning = true;
         document.getElementById("startkillerTime").disabled = true;
         document.getElementById("startkillerTime").textContent = "TEMPO MORTO";
     }
 }
+
 
 function playSound() {
     const audio = new Audio('som.mp3'); // Substitua 'som.mp3' pelo seu arquivo de som
@@ -118,7 +120,10 @@ function startExtraTime() {
 function showTimeoutModal() {
     const modal = document.getElementById("timeoutModal");
     modal.style.display = "block";
+    updateTimeoutDisplay();
+    updateGameTimerInTimeout(); // Atualiza o tempo do jogo no modal
 }
+
 
 function closeTimeoutModal() {
     const modal = document.getElementById("timeoutModal");
@@ -416,3 +421,11 @@ partToggle.addEventListener("click", function () {
     // Inverte o estado
     isPart1 = !isPart1;
 });
+
+function updateGameTimerInTimeout() {
+    const gameTimerDisplay = document.getElementById("gameTimerInTimeout");
+    const minutes = Math.floor(time / 60000);
+    const seconds = Math.floor((time % 60000) / 1000);
+    const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    gameTimerDisplay.textContent = formattedTime;
+}
