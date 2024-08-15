@@ -147,14 +147,14 @@ a{
 }
 
 .fouls {
-    color: red;
-    font-size: 3em; /* Aumenta o tamanho do texto das faltas */
+    color: black;
+    font-size: 5em; /* Aumenta o tamanho do texto das faltas */
     font-weight: bold;
 }
 
 .team h2 {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 3em;
 }
 
 .team .score {
@@ -186,7 +186,7 @@ P{
 }
 
 .timer-huge {
-    font-size: 8em; /* Aumenta o tamanho do tempo de jogo */
+    font-size: 10em; /* Aumenta o tamanho do tempo de jogo */
     font-weight: bold;
     color: #007bff;
 }
