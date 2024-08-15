@@ -148,7 +148,7 @@ a{
 
 .fouls {
     color: black;
-    font-size: 5em; /* Aumenta o tamanho do texto das faltas */
+    font-size: 2.5em; /* Aumenta o tamanho do texto das faltas */
     font-weight: bold;
 }
 
