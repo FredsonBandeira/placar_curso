@@ -315,4 +315,8 @@ P{
       margin-top: 10px; /* Espaço entre a imagem e a mensagem */
   }
   
-   
+  .red-timer {
+  color: red;
+  font-weight: bold;
+  font-size: 50px;
+} 
