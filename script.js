@@ -88,6 +88,7 @@ document.getElementById("reset").addEventListener("click", resetTimer)
 
 function startTimeout() {
     if (!timeoutIsRunning) {
+         playSound();
         timeoutInterval = setInterval(function () {
             if (timeoutTime === 0) {
                 clearInterval(timeoutInterval);
