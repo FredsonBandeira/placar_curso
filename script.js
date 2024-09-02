@@ -100,7 +100,7 @@ function startTimeout() {
         }, 1000);
         timeoutIsRunning = true;
         document.getElementById("startkillerTime").disabled = true;
-        document.getElementById("startkillerTime").textContent = "TEMPO MORTO";
+        document.getElementById("startkillerTime").textContent = "PAUSA TÉCNICA";
     }
 }
 
