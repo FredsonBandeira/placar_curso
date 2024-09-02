@@ -135,7 +135,7 @@ function closeTimeoutModal() {
         timeoutIsRunning = false;
         timeoutTime = 60000; // Defina o tempo morto de volta para 01:00:00 (em milissegundos)
         updateTimeoutDisplay();
-        document.getElementById("startkillerTime").textContent = "TEMPO MORTO";
+        document.getElementById("startkillerTime").textContent = "PAUSA TÉCNICA";
         document.getElementById("startkillerTime").disabled = false;
     }
 }
