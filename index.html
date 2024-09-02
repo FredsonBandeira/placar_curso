@@ -85,7 +85,7 @@
     <div class="controls">
         <button id="startPause" class="control-button">INICIAR</button>
         <button id="reset" class="control-button">REINICIAR</button>
-        <button id="startkillerTime" class="control-button" onclick="startTimeout()">TEMPO MORTO</button>
+        <button id="startkillerTime" class="control-button" onclick="startTimeout()">PAUSA TÉCNICA</button>
         <button id="startExtraTime" class="control-button" onclick="startExtraTime()">PROLONGAMENTO</button>
         <button id="resetGame" class="control-button">NOVO JOGO</button>
     </div>
@@ -114,7 +114,7 @@
 <!-- Janela modal para o tempo morto -->
 <div id="timeoutModal" class="modalE" style="display: none;">
     <div class="modal-contentE">
-        <h1>TEMPO MORTO</h1>
+        <h1>PAUSA TÉCNICA</h1>
         <div id="timeoutTimer" class="timer">01:00</div>
         <div id="gameTimerInTimeout" class="timer red-timer">20:00</div> <!-- Tempo do jogo -->
         <button onclick="closeTimeoutModal()">Fechar</button>
