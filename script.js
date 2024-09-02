@@ -256,6 +256,10 @@ document.getElementById("addTeamAFoul").addEventListener("click", function() {
     let currentFoulCount = parseInt(teamAFoulCount.textContent, 10);
     currentFoulCount++;
     teamAFoulCount.textContent = currentFoulCount;
+
+     if (currentFoulCount === 5) {
+        playSound(); // Chama a função que toca o som
+    }
 });
 
 // Event listener para remover falta da equipe A
@@ -273,6 +277,10 @@ document.getElementById("addTeamBFoul").addEventListener("click", function() {
     let currentFoulCount = parseInt(teamBFoulCount.textContent, 10);
     currentFoulCount++;
     teamBFoulCount.textContent = currentFoulCount;
+
+     if (currentFoulCount === 5) {
+        playSound(); // Chama a função que toca o som
+    }
 });
 
 // Event listener para remover falta da equipe B
