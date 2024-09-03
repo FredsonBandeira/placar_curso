@@ -110,6 +110,11 @@ function playSound() {
     const audio = new Audio('som.mp3'); // Substitua 'som.mp3' pelo seu arquivo de som
     audio.play();
 }
+function playFoulSound() {
+    // Aqui você pode definir o som específico a ser tocado
+    const foulSound = new Audio('faltas.mp3');
+    foulSound.play();
+}
 
 function startExtraTime() {
     if (!isRunning) {
@@ -258,7 +263,8 @@ document.getElementById("addTeamAFoul").addEventListener("click", function() {
     teamAFoulCount.textContent = currentFoulCount;
 
      if (currentFoulCount === 5) {
-        playSound(); // Chama a função que toca o som
+        playFoulSound(); // Chama a função que toca o som
+      
     }
 });
 
@@ -279,7 +285,8 @@ document.getElementById("addTeamBFoul").addEventListener("click", function() {
     teamBFoulCount.textContent = currentFoulCount;
 
      if (currentFoulCount === 5) {
-        playSound(); // Chama a função que toca o som
+       playFoulSound(); // Chama a função que toca o som
+      
     }
 });
 
