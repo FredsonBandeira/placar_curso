@@ -323,3 +323,38 @@ P{
 .faltas{
   font-size: 2.2em;
 }
+/* //// */
+
+
+.fouls {
+  color: red;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* Esconde a palavra "FALTAS" e o número de faltas quando o modo de penalidade está ativado */
+.fouls.penalty-mode {
+  display: flex;
+  flex-wrap: wrap; /* Permite a quebra de linha dos círculos */
+  font-size: 0; /* Esconde o texto */
+}
+
+.fouls.penalty-mode .faltas {
+  display: none; /* Esconde o texto do número de faltas */
+}
+
+/* Adiciona os círculos de penalidade e organiza em linhas */
+.penalty-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px; /* Ajuste conforme necessário */
+}
+
+
+
+/* Limita o número de círculos por linha */
+.fouls.penalty-mode {
+  max-width: calc(6 * (40px + 4px)); /* Ajuste o valor 6 para o número máximo de círculos por linha */
+}
