@@ -445,3 +445,77 @@ function updateGameTimerInTimeout() {
     const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     gameTimerDisplay.textContent = formattedTime;
 }
+
+
+// penalidade
+
+// Variável para verificar se o modo de penalidade está ativo
+let penaltyMode = false;
+
+// Função para alternar o modo de penalidade
+document.getElementById('penaltyButton').addEventListener('click', () => {
+    penaltyMode = !penaltyMode; // Alterna entre o modo de penalidade ativado e desativado
+    document.querySelectorAll('.team .fouls').forEach(element => {
+        element.classList.toggle('penalty-mode', penaltyMode); // Adiciona ou remove a classe para exibir ou ocultar os círculos
+    });
+});
+
+// Adiciona círculo verde para a equipe A
+document.getElementById('addTeamAGreenCircle').addEventListener('click', () => {
+    if (penaltyMode) {
+        addCircle('teamAFouls', 'green');
+    }
+});
+
+// Adiciona círculo vermelho para a equipe A
+document.getElementById('addTeamARedCircle').addEventListener('click', () => {
+    if (penaltyMode) {
+        addCircle('teamAFouls', 'red');
+    }
+});
+
+// Adiciona círculo verde para a equipe B
+document.getElementById('addTeamBGreenCircle').addEventListener('click', () => {
+    if (penaltyMode) {
+        addCircle('teamBFouls', 'green');
+    }
+});
+
+// Adiciona círculo vermelho para a equipe B
+document.getElementById('addTeamBRedCircle').addEventListener('click', () => {
+    if (penaltyMode) {
+        addCircle('teamBFouls', 'red');
+    }
+});
+
+// Remove o último círculo de penalidade da equipe A
+document.getElementById('RemovePenaldA').addEventListener('click', () => {
+    if (penaltyMode) {
+        removeLastCircle('teamAFouls');
+    }
+});
+
+// Remove o último círculo de penalidade da equipe B
+document.getElementById('RemovePenaldB').addEventListener('click', () => {
+    if (penaltyMode) {
+        removeLastCircle('teamBFouls');
+    }
+});
+
+// Função para adicionar um círculo ao contêiner de faltas
+function addCircle(teamFoulsId, color) {
+    const parentElement = document.getElementById(teamFoulsId);
+    const circle = document.createElement('div');
+    circle.classList.add('penalty-circle');
+    circle.style.backgroundColor = color;
+    parentElement.appendChild(circle);
+}
+
+// Função para remover o último círculo do contêiner de faltas
+function removeLastCircle(teamFoulsId) {
+    const parentElement = document.getElementById(teamFoulsId);
+    const circles = parentElement.getElementsByClassName('penalty-circle');
+    if (circles.length > 0) {
+        parentElement.removeChild(circles[circles.length - 1]);
+    }
+}
