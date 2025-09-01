@@ -160,6 +160,7 @@ a{
 .team .score {
     font-size: 6em; /* Aumenta o tamanho do texto dos golos */
     font-weight: bold;
+    color: blue;
     margin: 5px;
 }
 
@@ -327,7 +328,7 @@ P{
 
 
 .fouls {
-  color: black;
+  color: red;
   font-size: 3em;
   font-weight: bold;
 }
